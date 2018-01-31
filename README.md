@@ -6,7 +6,7 @@
 
 
 
-## Ban IP addresses and networks [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+## Ban IP addresses and networks
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
 
 1. If not already installed, install Fail2ban
@@ -37,6 +37,7 @@
 9. Click on the `Apply` button
 10. Click on the `OK` button
 
+[:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 
 
 ## Configure FTP passive ports [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
