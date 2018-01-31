@@ -3,7 +3,7 @@
 ## Configure passive ports for ProFTPd
 1. Connect to server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
-`sudo vi /etc/proftpd.conf`
+    sudo vi /etc/proftpd.conf
 ```
 ...
 <Global>
