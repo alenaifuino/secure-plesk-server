@@ -4,7 +4,8 @@
 * [Configure FTP passive ports](#configure-ftp-passive-ports)
 
 ## Ban IP addresses and networks
-##### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
+#### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
+
 1. If not already installed, install Fail2ban
 2. Go to `Tools & Settings` and then to `IP Address Banning (Fail2Ban)`
 3. Click on the `Settings`tab and then select the `Enable intrusion detection` checkbox.
@@ -19,7 +20,7 @@
 
 
 ## Configure FTP passive ports
-###### [Plesk reference document](https://support.plesk.com/hc/en-us/articles/213902285)
+#### [Plesk reference document](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
