@@ -5,7 +5,7 @@
 * [Configure FTP passive ports (ProFTPd)](#configure-ftp-passive-ports)
 
 
-## Ban IP addresses and networks
+## Ban IP addresses and networks [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
 
 1. If not already installed, install Fail2ban
