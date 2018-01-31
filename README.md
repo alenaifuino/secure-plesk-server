@@ -1,7 +1,7 @@
 # Steps to secure a Linux Plesk server
 
 ## Configure passive ports for ProFTPd
-1. Connect to server thru SSH
+1. Connect to the server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
 ```bash
 sudo vi /etc/proftpd.conf
@@ -11,42 +11,20 @@ sudo vi /etc/proftpd.conf
 ...
 PassivePorts 30000 31000
 </Global>
-...
 ```
-
-
-You can use the [editor on GitHub](https://github.com/halenai/secure-plesk/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+3. If not already installed, install Plesk Firewall 
+```bash
+sudo plesk installer --select-release-current --install-component psa-firewall
 ```
+4. If not already enabled, enable Plesk Firewall `Tools & Settings > Firewall` and click on the `Enable Firewall Rules Management` button, and then click on the `Enable` button.
+5. Once changes are applied, click on the `Modify Plesk Firewall Rules` button and then on the `Add Custom Rule` one.
+6. Specify the following information in the web form:
+  * Name of the rule: **FTP Passive Ports**
+  * Match direction: **Incoming**
+  * Action: **Allow**
+  * Add port or port range: set passive ports range specified in /etc/proftpd.conf, for example **30000-31000** and leave the **TCP option selected**, then click the `Add` button
+  * Click `OK`
+7. Click on the `Apply Changes` button
+8. Click on the `Activate` button
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/halenai/secure-plesk/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Test your configuration
