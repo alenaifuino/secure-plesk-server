@@ -5,6 +5,7 @@
 * [Configure FTP passive ports (ProFTPd)](#configure-ftp-passive-ports)
 
 
+
 ## Ban IP addresses and networks [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
 
@@ -21,7 +22,8 @@
 8. Click on the `OK` button
 
 
-## Web Application Firewall
+
+## Web Application Firewall [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/web-application-firewall-modsecurity.73383/)
 
 1. If not already installed, install ModSecurity
@@ -36,7 +38,8 @@
 10. Click on the `OK` button
 
 
-## Configure FTP passive ports
+
+## Configure FTP passive ports [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 #### [Plesk reference document](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
