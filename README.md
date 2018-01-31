@@ -4,10 +4,10 @@
 * [Configure FTP passive ports](#configure-ftp-passive-ports)
 
 ## Ban IP addresses and networks
-### Automatically ban IP addresses and networks that generate malicious traffic
+
 
 ## Configure FTP passive ports
-###### configure a passive ports range for ProFTPd
+###### Plesk reference document: [213902285](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
@@ -35,5 +35,3 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 7. Click on the `Apply Changes` button
 8. Click on the `Activate` button
 9. Test your configuration
-
-Plesk reference document: [213902285](https://support.plesk.com/hc/en-us/articles/213902285)
