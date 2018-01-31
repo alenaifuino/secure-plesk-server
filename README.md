@@ -1,5 +1,19 @@
 # Steps to secure a Linux Plesk server
 
+## Configure passive ports for ProFTPd
+1. Connect to server thru SSH
+2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
+`sudo vi /etc/proftpd.conf`
+```
+...
+<Global>
+...
+PassivePorts 30000 31000
+</Global>
+...
+```
+
+
 You can use the [editor on GitHub](https://github.com/halenai/secure-plesk/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
