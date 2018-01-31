@@ -4,9 +4,11 @@
 * [Configure FTP passive ports](#configure-ftp-passive-ports)
 
 ## Ban IP addresses and networks
-
+### Automatically ban IP addresses and networks that generate malicious traffic
 
 ## Configure FTP passive ports
+### configure a passive ports range for ProFTPd
+
 1. Connect to the server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
 ```bash
