@@ -1,6 +1,12 @@
 # Steps to secure a Linux Plesk server
 
-## Configure passive ports for ProFTPd
+* [Ban IP addresses and networks](#ban-ip-addresses-and-networks)
+* [Configure FTP passive ports](#configure-ftp-passive-ports)
+
+## Ban IP addresses and networks
+
+
+## Configure FTP passive ports
 1. Connect to the server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
 ```bash
