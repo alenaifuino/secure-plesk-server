@@ -26,5 +26,6 @@ sudo plesk installer --select-release-current --install-component psa-firewall
   * Click `OK`
 7. Click on the `Apply Changes` button
 8. Click on the `Activate` button
+9. Test your configuration
 
-Test your configuration
+Plesk reference document: [213902285](https://support.plesk.com/hc/en-us/articles/213902285)
