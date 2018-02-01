@@ -10,6 +10,9 @@
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
 
 1. If not already installed, install Fail2ban
+```
+sudo plesk installer --select-release-current --install-component fail2ban
+```
 2. Go to `Tools & Settings` and then to `IP Address Banning (Fail2Ban)`
 3. Click on the `Settings` tab and then select the `Enable intrusion detection` checkbox
 4. Set the settings that suit your needs:
@@ -28,6 +31,9 @@
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/web-application-firewall-modsecurity.73383/)
 
 1. If not already installed, install ModSecurity
+```
+sudo plesk installer --select-release-current --install-component modsecurity
+```
 2. Go to `Tools & Settings` and then to `Web Application Firewall (ModSecurity)`
 3. Click on the `General` tab
 4. Select the `On` checkbox right to the `Web application firewall mode` section
