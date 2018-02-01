@@ -21,9 +21,10 @@
 7. Select all the jails that you want to enable and then click on the `Switch On` button
 8. Click on the `OK` button
 
+[:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 
 
-## Web Application Firewall [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+## Web Application Firewall
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/web-application-firewall-modsecurity.73383/)
 
 1. If not already installed, install ModSecurity
@@ -40,7 +41,7 @@
 [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
 
 
-## Configure FTP passive ports [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+## Configure FTP passive ports
 #### [Plesk reference document](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
@@ -69,3 +70,6 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 7. Click on the `Apply Changes` button
 8. Click on the `Activate` button
 9. Test your configuration
+
+[:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+
