@@ -113,6 +113,7 @@ sudo nginx -t
 5. Restart Nginx Web server for the changes to take effect
 ```bash
 sudo systemctl restart nginx
+```
 
 ### SSL/TLS Optimization
 1. Connect to the server thru SSH
@@ -144,9 +145,18 @@ sudo systemctl restart nginx
 
 ### Gzip Compression
 1. Connect to the server thru SSH
-2. Edit the __/etc/nginx/conf.d/ssl.conf__ file
+2. Create the __gzip.conf__ file
 ```bash
-sudo vi /etc/nginx/conf.d/ssl.conf
+sudo touch /etc/nginx/conf.d/gzip.conf
+```
+3. Insert the following lines
+``Nginx
+gzip on;
+gzip_disable "MSIE [1-6]\\.(?!.*SV1)";
+gzip_proxied any;
+gzip_comp_level 5;
+gzip_types text/plain text/css application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript image/x-icon image/bmp image/svg+xml;
+gzip_vary on;
 ```
 
 <div align="right">
