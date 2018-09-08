@@ -102,6 +102,7 @@ sudo vi /etc/nginx/nginxconf
 ```Nginx
 http {
     ...
+    # avoid sending Nginx version number in error pages and server header
     server_tokens off;
     ...
 }
