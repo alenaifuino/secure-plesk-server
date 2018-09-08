@@ -3,7 +3,7 @@
 * [Ban IP Addresses and Networks (Fail2ban)](#ban-ip-addresses-and-networks)
 * [Web Application Firewall (ModSecurity)](#web-application-firewall)
 * [Configure FTP passive ports (ProFTPd)](#configure-ftp-passive-ports)
-* [Hardening Nginx SSL's Ciphers](#hardening-nginx-ssls-ciphers)
+* [Hardening Nginx](#hardening-nginx)
 ---
 <br>
 
@@ -93,10 +93,11 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 ## Hardening Nginx
 ### SSL/TLS Optimization
 1. Connect to the server thru SSH
-2. Edit the /etc/nginx/conf.d/ssl.conf file replacing the content with the following lines
+2. Edit the /etc/nginx/conf.d/ssl.conf file
 ```bash
 sudo vi /etc/nginx/conf.d/ssl.conf
 ```
+replacing the content with the following lines
 ```
 # Enable only secure cipher suites
 ssl_ciphers EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
