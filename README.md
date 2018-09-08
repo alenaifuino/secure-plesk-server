@@ -3,8 +3,9 @@
 * [Ban IP Addresses and Networks (Fail2ban)](#ban-ip-addresses-and-networks)
 * [Web Application Firewall (ModSecurity)](#web-application-firewall)
 * [Configure FTP passive ports (ProFTPd)](#configure-ftp-passive-ports)
-
-
+* [Hardening Nginx SSL's Ciphers](#hardening-nginx-ssls-ciphers)
+---
+<br>
 
 ## Ban IP Addresses and Networks
 #### [Plesk reference document (73381)](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
@@ -82,6 +83,40 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 7. Click on the `Apply Changes` button
 8. Click on the `Activate` button
 9. Test your configuration
+
+<div align="right">
+
+[:arrow_up:](#optimizing-and-securing-a-linux-plesk-server)
+
+</div>  
+
+## Hardening Nginx
+### SSL/TLS Optimization
+1. Connect to the server thru SSH
+2. Edit the /etc/nginx/conf.d/ssl.conf file replacing the content with the following lines
+```bash
+sudo vi /etc/nginx/conf.d/ssl.conf
+```
+```
+# Enable only secure cipher suites
+ssl_ciphers EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
+# Disable SSL 3 and TLSv1
+ssl_protocols TLSv1.1 TLSv1.2;
+# Server ciphers should be preferred over client ciphers when using TLS protocols
+ssl_prefer_server_ciphers on;
+# Enable session reuse to improve https performance
+ssl_session_cache shared:SSL:60m;
+ssl_session_timeout 1d;
+ssl_session_tickets off;
+```
+3. Save the file and test nginx configuration
+```bash
+sudo nginx -t
+```
+4. Restart Nginx Web server for the changes to take effect
+```bash
+sudo systemctl restart nginx
+```
 
 <div align="right">
 
