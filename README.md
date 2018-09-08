@@ -92,6 +92,28 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 </div>  
 
 ## Harden Nginx
+### Disable Server Tokens
+1. Connect to the server thru SSH
+2. Edit the __/etc/nginx/nginx.conf__ file
+```bash
+sudo vi /etc/nginx/nginxconf
+```
+3. Insert the following line in the `http` section
+```Nginx
+http {
+    ...
+    server_tokens off;
+    ...
+}
+```
+4. Save the file and test Nginx configuration
+```bash
+sudo nginx -t
+```
+5. Restart Nginx Web server for the changes to take effect
+```bash
+sudo systemctl restart nginx
+
 ### SSL/TLS Optimization
 1. Connect to the server thru SSH
 2. Edit the __/etc/nginx/conf.d/ssl.conf__ file
@@ -118,6 +140,13 @@ sudo nginx -t
 4. Restart Nginx Web server for the changes to take effect
 ```bash
 sudo systemctl restart nginx
+```
+
+### Gzip Compression
+1. Connect to the server thru SSH
+2. Edit the __/etc/nginx/conf.d/ssl.conf__ file
+```bash
+sudo vi /etc/nginx/conf.d/ssl.conf
 ```
 
 <div align="right">
