@@ -58,31 +58,32 @@ sudo plesk installer --select-release-current --install-component modsecurity
 #### [Plesk reference document (213902285)](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
-2. Edit the __/etc/proftpd.conf__ file inserting the following line inside the `Global` section
+2. Edit the __/etc/proftpd.conf__ file
 ```bash
 sudo vi /etc/proftpd.conf
-```    
+```
+3. Insert the following line inside the `Global` section
 ```
 <Global>
 ...
 PassivePorts 30000 31000
 </Global>
 ```
-3. If not already installed, install Plesk Firewall 
+4. If not already installed, install Plesk Firewall 
 ```bash
 sudo plesk installer --select-release-current --install-component psa-firewall
 ```
-4. If not already enabled, enable Plesk Firewall `Tools & Settings > Firewall` and click on the `Enable Firewall Rules Management` button, and then click on the `Enable` button.
-5. Once changes are applied, click on the `Modify Plesk Firewall Rules` button and then on the `Add Custom Rule` one.
-6. Specify the following information in the web form:
+5. If not already enabled, enable Plesk Firewall `Tools & Settings > Firewall` and click on the `Enable Firewall Rules Management` button, and then click on the `Enable` button.
+6. Once changes are applied, click on the `Modify Plesk Firewall Rules` button and then on the `Add Custom Rule` one.
+7. Specify the following information in the web form:
    - Name of the rule: __FTP Passive Ports__
    - Match direction: __Incoming__
    - Action: __Allow__
    - Add port or port range: set passive ports range specified in /etc/proftpd.conf, for example __30000-31000__ and leave the __TCP option selected__, then click the `Add` button
    - Click on the `OK` button
-7. Click on the `Apply Changes` button
-8. Click on the `Activate` button
-9. Test your configuration
+8. Click on the `Apply Changes` button
+9. Click on the `Activate` button
+10. Test your configuration
 
 <div align="right">
 
