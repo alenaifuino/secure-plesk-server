@@ -24,11 +24,9 @@ sudo plesk installer --select-release-current --install-component fail2ban
 7. Select all the jails that you want to enable and then click on the `Switch On` button
 8. Click on the `OK` button
 
-[:arrow_up:](#steps-to-secure-a-linux-plesk-server)
-
 <div align="right">
 
-[↥ back to top](#optimizing-and-securing-a-linux-plesk-server)
+[:arrow_up:](#optimizing-and-securing-a-linux-plesk-server)
 
 </div>
 
