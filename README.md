@@ -150,7 +150,7 @@ sudo systemctl restart nginx
 sudo touch /etc/nginx/conf.d/gzip.conf
 ```
 3. Insert the following lines
-``Nginx
+```Nginx
 gzip on;
 gzip_disable "MSIE [1-6]\\.(?!.*SV1)";
 gzip_proxied any;
