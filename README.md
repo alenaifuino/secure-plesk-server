@@ -1,4 +1,4 @@
-# Steps to secure a Linux Plesk server
+# Optimizing and Securing a Linux Plesk Server
 
 * [Ban IP addresses and networks (Fail2ban)](#ban-ip-addresses-and-networks)
 * [Web Application Firewall (ModSecurity)](#web-application-firewall)
@@ -25,6 +25,12 @@ sudo plesk installer --select-release-current --install-component fail2ban
 8. Click on the `OK` button
 
 [:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+
+<div align="right">
+
+[↥ back to top](#optimizing-and-securing-a-linux-plesk-server)
+
+</div>
 
 
 ## Web Application Firewall
