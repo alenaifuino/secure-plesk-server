@@ -28,8 +28,7 @@ sudo plesk installer --select-release-current --install-component fail2ban
 
 [:arrow_up:](#optimizing-and-securing-a-linux-plesk-server)
 
-</div>
-
+</div>  
 
 ## Web Application Firewall
 #### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/web-application-firewall-modsecurity.73383/)
@@ -48,8 +47,11 @@ sudo plesk installer --select-release-current --install-component modsecurity
 9. Click on the `Apply` button
 10. Click on the `OK` button
 
-[:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+<div align="right">
 
+[:arrow_up:](#optimizing-and-securing-a-linux-plesk-server)
+
+</div>  
 
 ## Configure FTP passive ports
 #### [Plesk reference document](https://support.plesk.com/hc/en-us/articles/213902285)
@@ -81,5 +83,11 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 8. Click on the `Activate` button
 9. Test your configuration
 
-[:arrow_up:](#steps-to-secure-a-linux-plesk-server)
+<div align="right">
+
+[:arrow_up:](#optimizing-and-securing-a-linux-plesk-server)
+
+</div>  
+
+
 
