@@ -1,13 +1,13 @@
 # Optimizing and Securing a Linux Plesk Server
 
-* [Ban IP addresses and networks (Fail2ban)](#ban-ip-addresses-and-networks)
+* [Ban IP Addresses and Networks (Fail2ban)](#ban-ip-addresses-and-networks)
 * [Web Application Firewall (ModSecurity)](#web-application-firewall)
 * [Configure FTP passive ports (ProFTPd)](#configure-ftp-passive-ports)
 
 
 
-## Ban IP addresses and networks
-#### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
+## Ban IP Addresses and Networks
+#### [Plesk reference document (73381)](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/protection-against-brute-force-attacks-fail2ban.73381/)
 
 1. If not already installed, install Fail2ban
 ```
@@ -31,7 +31,7 @@ sudo plesk installer --select-release-current --install-component fail2ban
 </div>  
 
 ## Web Application Firewall
-#### [Plesk reference document](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/web-application-firewall-modsecurity.73383/)
+#### [Plesk reference document (73383)](https://docs.plesk.com/en-US/onyx/administrator-guide/server-administration/web-application-firewall-modsecurity.73383/)
 
 1. If not already installed, install ModSecurity
 ```
@@ -54,7 +54,7 @@ sudo plesk installer --select-release-current --install-component modsecurity
 </div>  
 
 ## Configure FTP passive ports
-#### [Plesk reference document](https://support.plesk.com/hc/en-us/articles/213902285)
+#### [Plesk reference document (213902285)](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
 2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
@@ -88,6 +88,4 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 [:arrow_up:](#optimizing-and-securing-a-linux-plesk-server)
 
 </div>  
-
-
 
