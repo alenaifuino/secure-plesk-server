@@ -3,7 +3,7 @@
 * [Ban IP Addresses and Networks (Fail2ban)](#ban-ip-addresses-and-networks)
 * [Web Application Firewall (ModSecurity)](#web-application-firewall)
 * [Configure FTP passive ports (ProFTPd)](#configure-ftp-passive-ports)
-* [Hardening Nginx](#hardening-nginx)
+* [Harden Nginx](#harden-nginx)
 ---
 <br>
 
@@ -17,9 +17,9 @@ sudo plesk installer --select-release-current --install-component fail2ban
 2. Go to `Tools & Settings` and then to `IP Address Banning (Fail2Ban)`
 3. Click on the `Settings` tab and then select the `Enable intrusion detection` checkbox
 4. Set the settings that suit your needs:
-   - **IP address ban period**: time interval in seconds for which an IP address is banned. When this period is over, the IP address is automatically unbanned
-   - **Time interval for detection of subsequent attacks**: time interval in seconds during which the system counts the number of unsuccessful login attempts and other unwanted actions from an IP address
-   - **Number of failures before the IP address is banned**: number of failed login attempts from the IP address
+   - __IP address ban period__: time interval in seconds for which an IP address is banned. When this period is over, the IP address is automatically unbanned
+   - __Time interval for detection of subsequent attacks__: time interval in seconds during which the system counts the number of unsuccessful login attempts and other unwanted actions from an IP address
+   - __Number of failures before the IP address is banned__: number of failed login attempts from the IP address
 5. Click on the `Apply` button
 6. Click on the `Jails` tab
 7. Select all the jails that you want to enable and then click on the `Switch On` button
@@ -58,7 +58,7 @@ sudo plesk installer --select-release-current --install-component modsecurity
 #### [Plesk reference document (213902285)](https://support.plesk.com/hc/en-us/articles/213902285)
 
 1. Connect to the server thru SSH
-2. Edit the /etc/proftpd.conf file inserting the following line inside the `Global` section
+2. Edit the __/etc/proftpd.conf__ file inserting the following line inside the `Global` section
 ```bash
 sudo vi /etc/proftpd.conf
 ```    
@@ -75,10 +75,10 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 4. If not already enabled, enable Plesk Firewall `Tools & Settings > Firewall` and click on the `Enable Firewall Rules Management` button, and then click on the `Enable` button.
 5. Once changes are applied, click on the `Modify Plesk Firewall Rules` button and then on the `Add Custom Rule` one.
 6. Specify the following information in the web form:
-   - Name of the rule: **FTP Passive Ports**
-   - Match direction: **Incoming**
-   - Action: **Allow**
-   - Add port or port range: set passive ports range specified in /etc/proftpd.conf, for example **30000-31000** and leave the **TCP option selected**, then click the `Add` button
+   - Name of the rule: __FTP Passive Ports__
+   - Match direction: __Incoming__
+   - Action: __Allow__
+   - Add port or port range: set passive ports range specified in /etc/proftpd.conf, for example __30000-31000__ and leave the __TCP option selected__, then click the `Add` button
    - Click on the `OK` button
 7. Click on the `Apply Changes` button
 8. Click on the `Activate` button
@@ -90,10 +90,10 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 
 </div>  
 
-## Hardening Nginx
+## Harden Nginx
 ### SSL/TLS Optimization
 1. Connect to the server thru SSH
-2. Edit the /etc/nginx/conf.d/ssl.conf file
+2. Edit the __/etc/nginx/conf.d/ssl.conf__ file
 ```bash
 sudo vi /etc/nginx/conf.d/ssl.conf
 ```
@@ -110,7 +110,7 @@ ssl_session_cache shared:SSL:60m;
 ssl_session_timeout 1d;
 ssl_session_tickets off;
 ```
-3. Save the file and test nginx configuration
+3. Save the file and test Nginx configuration
 ```bash
 sudo nginx -t
 ```
