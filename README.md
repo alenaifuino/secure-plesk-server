@@ -97,7 +97,7 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 ```bash
 sudo vi /etc/nginx/conf.d/ssl.conf
 ```
-replacing the content with the following lines
+3. Replace the content with the following lines
 ```Nginx
 # Enable only secure cipher suites
 ssl_ciphers EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
