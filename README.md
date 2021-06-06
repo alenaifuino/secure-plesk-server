@@ -126,8 +126,10 @@ sudo vi /etc/nginx/conf.d/ssl.conf
 ```Nginx
 # Enable only secure cipher suites
 ssl_ciphers EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
-# Disable SSL 3 and TLSv1
-ssl_protocols TLSv1.1 TLSv1.2;
+EECDH+AESGCM+AES128:EECDH+AESGCM+AES256:EECDH+CHACHA20:EDH+AESGCM+AES128:EDH+AESGCM+AES256:EDH+CHACHA20:EECDH+SHA256+AES128:EECDH+SHA384+AES256:EDH+SHA256+AES128:EDH+SHA256+AES256:EECDH+SHA1+AES128:EECDH+SHA1+AES256:EDH+SHA1+AES128:EDH+SHA1+AES256:EECDH+HIGH:EDH+HIGH:AESGCM+AES128:AESGCM+AES256:CHACHA20:SHA256+AES128:SHA256+AES256:SHA1+AES128:SHA1+AES256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK:!KRB5:!aECDH:!kDH
+
+# Disable SSL 3, TLSv1, and TLSv1.1
+ssl_protocols TLSv1.2 TLSv1.3;
 # Server ciphers should be preferred over client ciphers when using TLS protocols
 ssl_prefer_server_ciphers on;
 # Enable session reuse to improve https performance
