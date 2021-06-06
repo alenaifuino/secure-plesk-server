@@ -96,7 +96,7 @@ sudo plesk installer --select-release-current --install-component psa-firewall
 1. Connect to the server thru SSH
 2. Edit the __/etc/nginx/nginx.conf__ file
 ```bash
-sudo vi /etc/nginx/nginxconf
+sudo vi /etc/nginx/nginx.conf
 ```
 3. Insert the following line in the `http` section
 ```Nginx
